@@ -22,11 +22,12 @@ body {
 
 .square {
   /* background-color: red; */
-  border: solid black thin;
+  /* border: solid black thin; */
   height: 31.25px;
   width: 31.25px;
   box-sizing: border-box;
   background-color: none;
+  flex: 1;
 }
 
 .top {
