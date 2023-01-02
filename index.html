@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
   </head>
   <body>
     <div class="top">
       <h1>Etch-A-Sketch</h1>
+      <div class="input-field">
+        <label class="label" for="myInput">Resolution (2-100px):</label>
+        <input id="myInput" type="number" onchange="changeRes()" />
+      </div>
     </div>
 
     <div class="grid-container"></div>

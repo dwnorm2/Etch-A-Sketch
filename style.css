@@ -33,8 +33,26 @@ body {
 .top {
   height: 10vh;
   font-size: xx-large;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.label {
+  font-size: x-large;
+  margin-top: 10px;
+}
+
+#myInput {
+  height: 20px;
+  width: 40px;
+  margin-top: 10px;
 }
 
 .bottom {
   height: 10vh;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
 }
