@@ -1,17 +1,20 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   min-height: 100vh;
   box-sizing: border-box;
+  background-color: antiquewhite;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .grid-container {
   border: solid black;
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -22,17 +25,18 @@ body {
 
 .square {
   /* background-color: red; */
-  /* border: solid black thin; */
+  border: solid rgb(229, 229, 229) 0.9px;
   height: 31.25px;
   width: 31.25px;
   box-sizing: border-box;
-  background-color: none;
+  background-color: white;
   flex: 1;
 }
 
 .top {
   height: 10vh;
   font-size: xx-large;
+  /* border: solid black; */
   /* display: flex;
   flex-direction: column; */
 }
@@ -52,7 +56,12 @@ body {
   height: 10vh;
 }
 
+.px {
+  font-size: small;
+}
+
 .input-field {
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }

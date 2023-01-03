@@ -20,7 +20,7 @@ function changeRes() {
 
 //caluclate pixel size
 function getPixelSize() {
-  return 500 / resolution;
+  return 400 / resolution;
 }
 
 //grid creation
