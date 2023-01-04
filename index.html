@@ -11,14 +11,40 @@
   <body>
     <div class="top">
       <h1>Etch-A-Sketch</h1>
-      <div class="input-field">
-        <label class="label" for="myInput">Resolution (2-100px):</label>
-        <input id="myInput" type="number" value="16" onchange="changeRes()" />
-      </div>
     </div>
 
-    <div class="grid-container"></div>
-    <div class="bottom"></div>
+    <div class="middle">
+      <div class="left">
+        <div class="input-field">
+          <label class="label" for="myInput">Resolution (2-100px):</label>
+          <input id="myInput" type="number" value="16" onchange="changeRes()" />
+        </div>
+        <div class="buttons">
+          <div class="color-button">
+            <input type="radio" id="black" name="color_select" value="Black" />
+              <label for="Black" class="radio-buttons">Black</label>
+          </div>
+          <div class="color-button">
+            <input
+              type="radio"
+              id="rainbow"
+              name="color_select"
+              value="Rainbow"
+            />
+              <label for="Rainbow" class="radio-buttons">Rainbow</label>
+          </div>
+          <div class="color-button">
+            <input type="radio" id="erase" name="color_select" value="Erase" />
+              <label for="Erase" class="radio-buttons">Erase</label>
+          </div>
+        </div>
+        <button class="erase-all">Erase All</button>
+      </div>
+
+      <div class="grid-container"></div>
+    </div>
+
+    <!-- <div class="bottom"></div> -->
 
     <script src="main.js"></script>
   </body>

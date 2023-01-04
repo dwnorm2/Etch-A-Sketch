@@ -1,4 +1,14 @@
 const gridContainer = document.querySelector(".grid-container");
+const eraseAllButton = document.querySelector(".erase-all");
+const blackButton = document.getElementById("black");
+const rainbowButton = document.getElementById("rainbow");
+const eraseButton = document.getElementById("erase");
+
+eraseAllButton.addEventListener("click", () => {
+  document.querySelectorAll(".square").forEach((square) => {
+    square.style.backgroundColor = "white";
+  });
+});
 
 let row;
 let square;
@@ -13,9 +23,10 @@ function changeRes() {
   } else if (resolution > 100) {
     resolution = 100;
   }
-  getPixelSize();
+  // getPixelSize();
   createGrid();
   squareCustomization();
+  SquareColor();
 }
 
 //caluclate pixel size
@@ -52,14 +63,46 @@ function squareCustomization() {
   document.querySelectorAll(".square").forEach((square) => {
     square.setAttribute("style", `width:${pixelSize}px`);
     square.setAttribute("style", `height:${pixelSize}px`);
+  });
+}
 
-    square.addEventListener("mouseover", () => {
-      let randomColor = random_bg_color();
-      square.style.backgroundColor = randomColor;
-      // square.style.backgroundColor = "black";
+function SquareColor() {
+  //idk why this if works? It makes it so blackButton is checked by default
+  if ((blackButton.checked = true)) {
+    document.querySelectorAll(".square").forEach((square) => {
+      square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "black";
+      });
+    });
+  }
+  blackButton.addEventListener("click", () => {
+    document.querySelectorAll(".square").forEach((square) => {
+      square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "black";
+      });
+    });
+  });
+
+  rainbowButton.addEventListener("click", () => {
+    document.querySelectorAll(".square").forEach((square) => {
+      square.addEventListener("mouseover", () => {
+        //add different options for color buttons
+        let randomColor = random_bg_color();
+        square.style.backgroundColor = randomColor;
+        // square.style.backgroundColor = "black";
+      });
+    });
+  });
+
+  eraseButton.addEventListener("click", () => {
+    document.querySelectorAll(".square").forEach((square) => {
+      square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "white";
+      });
     });
   });
 }
 
 createGrid();
 squareCustomization();
+SquareColor();
