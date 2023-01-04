@@ -14,7 +14,6 @@ let row;
 let square;
 let resolution = 16;
 
-//change res
 function changeRes() {
   gridContainer.innerHTML = "";
   resolution = document.getElementById("myInput").value;
@@ -23,10 +22,10 @@ function changeRes() {
   } else if (resolution > 100) {
     resolution = 100;
   }
-  // getPixelSize();
+
   createGrid();
-  squareCustomization();
-  SquareColor();
+  squareSize();
+  squareColor();
 }
 
 //caluclate pixel size
@@ -57,8 +56,8 @@ function random_bg_color() {
   return "rgb(" + x + "," + y + "," + z + ")";
 }
 
-//square customization
-function squareCustomization() {
+//square size
+function squareSize() {
   let pixelSize = getPixelSize();
   document.querySelectorAll(".square").forEach((square) => {
     square.setAttribute("style", `width:${pixelSize}px`);
@@ -66,7 +65,7 @@ function squareCustomization() {
   });
 }
 
-function SquareColor() {
+function squareColor() {
   //idk why this if works? It makes it so blackButton is checked by default
   if ((blackButton.checked = true)) {
     document.querySelectorAll(".square").forEach((square) => {
@@ -104,5 +103,5 @@ function SquareColor() {
 }
 
 createGrid();
-squareCustomization();
-SquareColor();
+squareSize();
+squareColor();
