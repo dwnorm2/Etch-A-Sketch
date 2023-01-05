@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  /* justify-cotent: space-around; */
+  justify-content: space-between;
   align-items: center;
 
   text-align: center;
@@ -55,9 +55,11 @@ body {
 
 #myInput {
   height: 20px;
-  width: 40px;
+  width: 45px;
   margin-top: 15px;
   margin-left: 5px;
+  font-size: medium;
+  cursor: auto;
 }
 
 .input-field {
@@ -81,12 +83,13 @@ body {
 
 .color-button {
   align-self: flex-start;
-  border-radius: 25px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 12px;
   margin: 5px;
   background-color: black;
   color: white;
   border: solid black;
+  display: flex;
 }
 
 .radio-buttons,
@@ -141,4 +144,21 @@ button {
 .erase-button {
   background-color: white;
   color: black;
+}
+
+.footer {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 30px;
 }

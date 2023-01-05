@@ -18,8 +18,8 @@ let resolution = 16;
 function changeRes() {
   gridContainer.innerHTML = "";
   resolution = document.getElementById("myInput").value;
-  if (resolution < 2) {
-    resolution = 2;
+  if (resolution < 1) {
+    resolution = 1;
   } else if (resolution > 100) {
     resolution = 100;
   }

@@ -9,31 +9,42 @@
     <link rel="stylesheet" href="reset.css" />
   </head>
   <body>
-    <div class="top">
-      <h1>Etch-A-Sketch</h1>
-    </div>
+    <div class="content">
+      <div class="top">
+        <h1>Etch-A-Sketch</h1>
+      </div>
 
-    <div class="middle">
-      <div class="left">
-        <div class="input-field">
-          <label class="label" for="myInput">Resolution (2-100px):</label>
-          <input id="myInput" type="number" value="16" onchange="changeRes()" />
-        </div>
-        <div class="buttons">
-          <div class="color-button">
-            <input type="radio" id="black" name="color_select" value="Black" />
-              <label for="black" class="radio-buttons">Black</label>
-          </div>
-          <div class="color-button rainbow">
+      <div class="middle">
+        <div class="left">
+          <div class="input-field">
+            <label class="label" for="myInput">Resolution (1-100px):</label>
             <input
-              type="radio"
-              id="rainbow"
-              name="color_select"
-              value="Rainbow"
+              id="myInput"
+              type="number"
+              value="16"
+              onchange="changeRes()"
             />
-              <label for="rainbow" class="radio-buttons">Rainbow</label>
           </div>
-          <!-- <div class="color-button">
+          <div class="buttons">
+            <div class="color-button">
+              <input
+                type="radio"
+                id="black"
+                name="color_select"
+                value="Black"
+              />
+                <label for="black" class="radio-buttons">Black</label>
+            </div>
+            <div class="color-button rainbow">
+              <input
+                type="radio"
+                id="rainbow"
+                name="color_select"
+                value="Rainbow"
+              />
+                <label for="rainbow" class="radio-buttons">Rainbow</label>
+            </div>
+            <!-- <div class="color-button">
             <input
               type="radio"
               id="gradient"
@@ -42,17 +53,28 @@
             />
               <label for="Gradient" class="radio-buttons">Gradient</label>
           </div> -->
-          <div class="color-button erase-button">
-            <input type="radio" id="erase" name="color_select" value="Erase" />
-              <label for="erase" class="radio-buttons">Erase</label>
+            <div class="color-button erase-button">
+              <input
+                type="radio"
+                id="erase"
+                name="color_select"
+                value="Erase"
+              />
+                <label for="erase" class="radio-buttons">Erase</label>
+            </div>
           </div>
+          <button class="erase-all">Erase All</button>
         </div>
-        <button class="erase-all">Erase All</button>
+
+        <div class="grid-container"></div>
       </div>
-
-      <div class="grid-container"></div>
     </div>
-
+    <a href="https://github.com/dwnorm2" target="_blank">
+      <footer class="footer">
+        <div class="footer-text">Designed/Built by dwnorm2&ensp;</div>
+        <img src=./images/github-mark.png alt="" class="github" />
+      </footer>
+    </a>
     <script src="main.js"></script>
   </body>
 </html>
