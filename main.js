@@ -3,6 +3,7 @@ const eraseAllButton = document.querySelector(".erase-all");
 const blackButton = document.getElementById("black");
 const rainbowButton = document.getElementById("rainbow");
 const eraseButton = document.getElementById("erase");
+// let click = true;
 
 eraseAllButton.addEventListener("click", () => {
   document.querySelectorAll(".square").forEach((square) => {
@@ -67,6 +68,7 @@ function squareSize() {
 
 function squareColor() {
   //idk why this if works? It makes it so blackButton is checked by default
+
   if ((blackButton.checked = true)) {
     document.querySelectorAll(".square").forEach((square) => {
       square.addEventListener("mouseover", () => {
@@ -74,6 +76,7 @@ function squareColor() {
       });
     });
   }
+
   blackButton.addEventListener("click", () => {
     document.querySelectorAll(".square").forEach((square) => {
       square.addEventListener("mouseover", () => {
@@ -105,3 +108,8 @@ function squareColor() {
 createGrid();
 squareSize();
 squareColor();
+
+// document.querySelector(".grid-container").addEventListener("click", () => {
+//   click = !click;
+//   console.log(click);
+// });

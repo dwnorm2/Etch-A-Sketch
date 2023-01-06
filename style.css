@@ -25,6 +25,9 @@ body {
   margin-left: 10px;
 }
 
+.grid-container:hover {
+  cursor: crosshair;
+}
 .square-row {
   display: flex;
 }
