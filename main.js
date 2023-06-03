@@ -13,7 +13,7 @@ eraseAllButton.addEventListener("click", () => {
 
 let row;
 let square;
-let resolution = 6;
+let resolution = 16;
 
 function changeRes() {
   gridContainer.innerHTML = "";
